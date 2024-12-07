@@ -1,0 +1,107 @@
+﻿@model IEnumerable<ACP.Models.Cliente>
+
+@{
+    ViewData["Title"] = "Lista de Clientes";
+    Layout = "~/Views/Shared/_Layout.cshtml"; // Ajusta esto según el layout que estés utilizando
+}
+
+<h2 class="mb-5">@ViewData["Title"]</h2>
+
+<p>
+    <a class="btn btn-primary mb-4" asp-controller="Clientes" asp-action="Create">Crear Nuevo Cliente</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Apellido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Documento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Telefono)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Correo)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Apellido)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Documento)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Telefono)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Correo)
+                </td>
+                <td>
+                    <a class="btn btn-warning disabled" asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                    @* <a class="btn btn-danger disabled   " asp-action="Delete" asp-route-id="@item.Id">Eliminar</a> | *@
+                    <a 
+                        href="#"
+                        class="btn btn-danger btn-eliminar-cliente"
+                        data-id="@item.Id"
+                        onclick="confirmDeletion('@item.Id','@item.Nombre','@item.Apellido', '@item.Documento')">
+                        Eliminar
+                    </a> | 
+                    <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">Detalles</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@section Scripts {
+        <script>
+            @if (TempData["SuccessMessage"] != null)
+            {
+                <text>
+                            toastr.success('@TempData["SuccessMessage"]');
+                </text>
+            }
+            @if (TempData["ErrorMessage"] != null)
+            {
+                <text>
+                            toastr.error('@TempData["ErrorMessage"]');
+                </text>
+            }
+            function confirmDeletion(id, nombre, apellido, documento) {
+                if (confirm(`¿Estás seguro de que deseas eliminar al cliente "${nombre} ${apellido} con documento ${documento}"?`)) {
+                    var row = $('.btn-eliminar-cliente[data-id="' + id + '"]').closest('tr');
+                    $.ajax({
+                        url: '/Clientes/Delete',
+                        type: 'POST',
+                        data: { id: id },
+                        success: function (response) {
+                            if (response.success) {
+                                toastr.success(response.message); // Mostrar el mensaje de éxito
+                                row.remove(); // Eliminar la fila de la tabla
+                            } else {
+                                toastr.error(response.message); // Mostrar el mensaje de error
+                            }
+                        },
+                        error: function () {
+                            toastr.error('Hubo un error al intentar eliminar el vehiculo.');
+                        }
+                    });
+                }
+            }
+        </script>
+}

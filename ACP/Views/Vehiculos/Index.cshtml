@@ -1,0 +1,133 @@
+﻿@model IEnumerable<ACP.Models.Vehiculo>
+
+@{
+    ViewData["Title"] = "Lista de Vehículos";
+    Layout = "~/Views/Shared/_Layout.cshtml"; // Ajusta esto según el layout que estés utilizando
+}
+
+<h2 class="mb-5">@ViewData["Title"]</h2>
+
+<p>
+    <a class="btn btn-primary mb-4" asp-controller="Vehiculos" asp-action="Create">Crear Nuevo Vehículo</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Placa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Modelo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fabricante)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Color)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Referencia)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Placa)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Modelo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Fabricante.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Color.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Referencia.Nombre)
+                </td>
+                <td>
+                    <a class="btn btn-warning disabled" asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                    @* <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Eliminar</a> *@
+                    @* <a href="#" class="btn btn-danger btn-eliminar" data-id="@item.Id">Eliminar</a> *@
+                    <a 
+                        href="#" 
+                        class="btn btn-danger btn-eliminar-vehiculo" 
+                        data-id="@item.Id"
+                        onclick="confirmDeletion('@item.Id','@item.Fabricante.Nombre','@item.Referencia.Nombre', '@item.Placa')">
+                        Eliminar
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@section Scripts {
+    <script>
+        @if (TempData["SuccessMessage"] != null)
+        {
+            <text>
+                toastr.success('@TempData["SuccessMessage"]');
+            </text>
+        }
+        @if (TempData["ErrorMessage"] != null)
+        {
+            <text>
+                toastr.error('@TempData["ErrorMessage"]');
+            </text>
+        }
+
+        /*$(document).on('click', '.btn-eliminar', function (e) {
+            e.preventDefault();
+
+            var id = $(this).data('id'); // Obtener el ID del registro desde el botón
+            var row = $(this).closest('tr'); // Selecciona la fila de la tabla que contiene el registro
+
+            $.ajax({
+                url: '/Vehiculos/Delete',
+                type: 'POST',
+                data: { id: id },
+                success: function (response) {
+                    if (response.success) {
+                        toastr.success(response.message); // Mostrar el mensaje de éxito
+                        row.remove(); // Eliminar la fila de la tabla
+                    } else {
+                        toastr.error(response.message); // Mostrar el mensaje de error
+                    }
+                },
+                error: function () {
+                    toastr.error('Hubo un error al intentar eliminar el vehículo.');
+                }
+            });
+         });*/
+
+        function confirmDeletion(id, fabricante, referencia, placa) {
+            if (confirm(`¿Estás seguro de que deseas eliminar el "${fabricante} ${referencia} ${placa}"?`)) {
+                var row = $('.btn-eliminar-vehiculo[data-id="' + id + '"]').closest('tr');
+                $.ajax({
+                    url: '/Vehiculos/Delete',
+                    type: 'POST',
+                    data: { id: id },
+                    success: function (response) {
+                        if (response.success) {
+                            toastr.success(response.message); // Mostrar el mensaje de éxito
+                            row.remove(); // Eliminar la fila de la tabla
+                        } else {
+                            toastr.error(response.message); // Mostrar el mensaje de error
+                        }
+                    },
+                    error: function () {
+                        toastr.error('Hubo un error al intentar eliminar el vehiculo.');
+                    }
+                });
+            }
+        }
+
+    </script>
+}

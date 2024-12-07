@@ -1,0 +1,89 @@
+﻿@model ACP.ViewModels.CrearClienteViewModel
+
+@{
+    // ViewData["Title"] = "Crear Cliente";
+    Layout = "~/Views/Shared/_Layout.cshtml"; // Ajusta esto según el layout que estés utilizando
+}
+
+@* <h2>@ViewData["Title"]</h2> *@
+
+<h4 class="mb-4 h2">NuevoCliente</h4>
+
+<div class="row">
+    <div class="col-md-8">
+        <form asp-controller="Clientes" asp-action="Create">
+            <div class="form-floating mb-3">
+                <input asp-for="Nombre" class="form-control" autocomplete="nombre" aria-required="true" placeholder="Nombre" />
+                <label asp-for="Nombre" class="form-label">Nombre</label>
+                <span asp-validation-for="Nombre" class="text-danger"></span>
+            </div>
+            <div class="form-floating mb-3">
+                <input asp-for="Apellido" class="form-control" autocomplete="apellido" aria-required="true" placeholder="Apellido" />
+                <label asp-for="Apellido" class="control-label">Apellido</label>
+                <span asp-validation-for="Apellido" class="text-danger"></span>
+            </div>
+            <div class="form-floating mb-3">
+                <input asp-for="Documento" class="form-control" autocomplete="documento" aria-required="true" placeholder="Documento" />
+                <label asp-for="Documento" class="control-label">Documento</label>
+                <span asp-validation-for="Documento" class="text-danger"></span>
+            </div>
+            <div class="form-floating mb-3">
+                <input asp-for="Telefono" class="form-control" autocomplete="telefono" aria-required="true" placeholder="Telefono" />
+                <label asp-for="Telefono" class="control-label">Telefono</label>
+                <span asp-validation-for="Telefono" class="text-danger"></span>
+            </div>
+            <div class="form-floating mb-3">
+                <input asp-for="Correo" class="form-control" autocomplete="correo" aria-required="true" placeholder="Correo" />
+                <label asp-for="Correo" class="control-label">Correo</label>
+                <span asp-validation-for="Correo" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3">
+                <label for="vehiculoPlacas" class="control-label">Vehiculos</label>
+                <select id="vehiculoPlacas" name="VehiculosSeleccionados" class="form-control" multiple="multiple"></select>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Guardar</button>
+                <a class="btn btn-secondary" asp-action="Index">Cancelar</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+
+    <script>
+        $(document)
+            .ready(function () { 
+                $("#vehiculoPlacas")
+                    .select2({ 
+                        placeholder: "Buscar y seleccionar placas", 
+                        minimumInputLength: 2, 
+                        ajax: { 
+                            url: '@Url.Action("GetVehiculoPlacas", "Vehiculos")', 
+                            dataType: 'json', 
+                            delay: 250, 
+                            data: function (params) { 
+                                return { 
+                                    term: params.term 
+                                }; 
+                            }, 
+                            processResults: function (data) { 
+                                return { 
+                                    results: $.map(data, function (placa) { 
+                                        return { 
+                                            id: placa, 
+                                            text: placa 
+                                        }; 
+                                    }) 
+                                }; 
+                            }, 
+                            cache: true 
+                        } 
+                    });
+            });
+    </script>
+}
+
+
+

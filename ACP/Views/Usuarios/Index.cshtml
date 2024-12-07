@@ -1,0 +1,115 @@
+﻿@model IEnumerable<ACP.Models.ApplicationUser>
+
+@{
+    ViewData["Title"] = "Lista de Usuarios";
+    Layout = "~/Views/Shared/_Layout.cshtml"; // Ajusta esto según el layout que estés utilizando
+}
+
+<h2 class="mb-5">@ViewData["Title"]</h2>
+
+<p>
+    <a class="btn btn-primary mb-4"
+       id="register"
+       asp-area="Identity"
+       asp-page="/Account/Register">
+       Crear Nuevo Usuario
+    </a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.UserName)</th>
+            <th>@Html.DisplayNameFor(model => model.Email)</th>
+            <th>@Html.DisplayNameFor(model => model.FirstName)</th>
+            <th>@Html.DisplayNameFor(model => model.LastName)</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.UserName)</td>
+                <td>@Html.DisplayFor(modelItem => item.Email)</td>
+                <td>@Html.DisplayFor(modelItem => item.FirstName)</td>
+                <td>@Html.DisplayFor(modelItem => item.LastName)</td>
+                <td>
+                    <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">Detalle</a> |
+                    <a class="btn btn-warning" asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                    @* <a class="btn btn-danger disabled" asp-action="Delete" asp-route-id="@item.Id">Eliminar</a> *@
+                    <a 
+                        href="#" 
+                        class="btn btn-danger btn-eliminar-usuario" 
+                        data-id="@item.Id"
+                        onclick="confirmDeletion('@item.Id','@item.FirstName','@item.LastName')">
+                        Eliminar
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@section Scripts {
+    <script>
+        @if (TempData["SuccessMessage"] != null)
+        {
+            <text>
+                    toastr.success('@TempData["SuccessMessage"]');
+            </text>
+        }
+        @if (TempData["ErrorMessage"] != null)
+        {
+            <text>
+                    toastr.error('@TempData["ErrorMessage"]');
+            </text>
+        }
+
+        /*$(document).on('click', '.btn-eliminar-usuario', function (e) {
+            e.preventDefault();
+
+            var id = $(this).data('id'); // Obtener el ID del registro desde el botón
+            var row = $(this).closest('tr'); // Selecciona la fila de la tabla que contiene el registro
+
+            $.ajax({
+                url: '/Usuarios/Delete',
+                type: 'POST',
+                data: { id: id },
+                success: function (response) {
+                    if (response.success) {
+                        toastr.success(response.message); // Mostrar el mensaje de éxito
+                        row.remove(); // Eliminar la fila de la tabla
+                    } else {
+                        toastr.error(response.message); // Mostrar el mensaje de error
+                    }
+                },
+                error: function () {
+                    toastr.error('Hubo un error al intentar eliminar el vehículo.');
+                }
+            });
+        });*/
+
+        function confirmDeletion(id, firstName, lastName) {
+            if (confirm(`¿Estás seguro de que deseas eliminar a "${firstName} ${lastName}"?`)) {
+                var row = $('.btn-eliminar-usuario[data-id="' + id + '"]').closest('tr'); 
+                $.ajax({ 
+                    url: '/Usuarios/Delete', 
+                    type: 'POST', 
+                    data: { id: id }, 
+                    success: function (response) { 
+                        if (response.success) { 
+                            toastr.success(response.message); // Mostrar el mensaje de éxito 
+                            row.remove(); // Eliminar la fila de la tabla 
+                        } else { 
+                            toastr.error(response.message); // Mostrar el mensaje de error 
+                        } 
+                    }, 
+                    error: function () { 
+                        toastr.error('Hubo un error al intentar eliminar el usuario.'); 
+                    } 
+                }); 
+            } 
+        }
+    </script>
+}

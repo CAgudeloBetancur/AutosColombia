@@ -1,0 +1,268 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\user\\source\\repos\\ACP\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5416D019-BD5C-4968-A6A9-1F205E63C584}|ACP\\ACP.csproj|c:\\users\\user\\source\\repos\\acp\\acp\\views\\usuarios\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5416D019-BD5C-4968-A6A9-1F205E63C584}|ACP\\ACP.csproj|solutionrelative:acp\\views\\usuarios\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5416D019-BD5C-4968-A6A9-1F205E63C584}|ACP\\ACP.csproj|c:\\users\\user\\source\\repos\\acp\\acp\\controllers\\vehiculoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5416D019-BD5C-4968-A6A9-1F205E63C584}|ACP\\ACP.csproj|solutionrelative:acp\\controllers\\vehiculoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5416D019-BD5C-4968-A6A9-1F205E63C584}|ACP\\ACP.csproj|c:\\users\\user\\source\\repos\\acp\\acp\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5416D019-BD5C-4968-A6A9-1F205E63C584}|ACP\\ACP.csproj|solutionrelative:acp\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5416D019-BD5C-4968-A6A9-1F205E63C584}|ACP\\ACP.csproj|c:\\users\\user\\source\\repos\\acp\\acp\\controllers\\clientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5416D019-BD5C-4968-A6A9-1F205E63C584}|ACP\\ACP.csproj|solutionrelative:acp\\controllers\\clientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5416D019-BD5C-4968-A6A9-1F205E63C584}|ACP\\ACP.csproj|c:\\users\\user\\source\\repos\\acp\\acp\\services\\implementations\\serviciocliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5416D019-BD5C-4968-A6A9-1F205E63C584}|ACP\\ACP.csproj|solutionrelative:acp\\services\\implementations\\serviciocliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5416D019-BD5C-4968-A6A9-1F205E63C584}|ACP\\ACP.csproj|c:\\users\\user\\source\\repos\\acp\\acp\\viewmodels\\detalleusuarioviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5416D019-BD5C-4968-A6A9-1F205E63C584}|ACP\\ACP.csproj|solutionrelative:acp\\viewmodels\\detalleusuarioviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5416D019-BD5C-4968-A6A9-1F205E63C584}|ACP\\ACP.csproj|c:\\users\\user\\source\\repos\\acp\\acp\\services\\interfaces\\iserviciocliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5416D019-BD5C-4968-A6A9-1F205E63C584}|ACP\\ACP.csproj|solutionrelative:acp\\services\\interfaces\\iserviciocliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5416D019-BD5C-4968-A6A9-1F205E63C584}|ACP\\ACP.csproj|c:\\users\\user\\source\\repos\\acp\\acp\\views\\usuarios\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5416D019-BD5C-4968-A6A9-1F205E63C584}|ACP\\ACP.csproj|solutionrelative:acp\\views\\usuarios\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5416D019-BD5C-4968-A6A9-1F205E63C584}|ACP\\ACP.csproj|c:\\users\\user\\source\\repos\\acp\\acp\\views\\vehiculos\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5416D019-BD5C-4968-A6A9-1F205E63C584}|ACP\\ACP.csproj|solutionrelative:acp\\views\\vehiculos\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5416D019-BD5C-4968-A6A9-1F205E63C584}|ACP\\ACP.csproj|c:\\users\\user\\source\\repos\\acp\\acp\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5416D019-BD5C-4968-A6A9-1F205E63C584}|ACP\\ACP.csproj|solutionrelative:acp\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5416D019-BD5C-4968-A6A9-1F205E63C584}|ACP\\ACP.csproj|c:\\users\\user\\source\\repos\\acp\\acp\\views\\clientes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5416D019-BD5C-4968-A6A9-1F205E63C584}|ACP\\ACP.csproj|solutionrelative:acp\\views\\clientes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5416D019-BD5C-4968-A6A9-1F205E63C584}|ACP\\ACP.csproj|c:\\users\\user\\source\\repos\\acp\\acp\\repositories\\implementations\\repositoriogenerico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5416D019-BD5C-4968-A6A9-1F205E63C584}|ACP\\ACP.csproj|solutionrelative:acp\\repositories\\implementations\\repositoriogenerico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5416D019-BD5C-4968-A6A9-1F205E63C584}|ACP\\ACP.csproj|c:\\users\\user\\source\\repos\\acp\\acp\\views\\usuarios\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5416D019-BD5C-4968-A6A9-1F205E63C584}|ACP\\ACP.csproj|solutionrelative:acp\\views\\usuarios\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5416D019-BD5C-4968-A6A9-1F205E63C584}|ACP\\ACP.csproj|c:\\users\\user\\source\\repos\\acp\\acp\\areas\\identity\\pages\\account\\manage\\email.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5416D019-BD5C-4968-A6A9-1F205E63C584}|ACP\\ACP.csproj|solutionrelative:acp\\areas\\identity\\pages\\account\\manage\\email.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "_LoginPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\ACP\\ACP\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeDocumentMoniker": "ACP\\Views\\Shared\\_LoginPartial.cshtml",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\ACP\\ACP\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeToolTip": "ACP\\Views\\Shared\\_LoginPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvxAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-07T18:43:42.737Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\ACP\\ACP\\Views\\Clientes\\Index.cshtml",
+              "RelativeDocumentMoniker": "ACP\\Views\\Clientes\\Index.cshtml",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\ACP\\ACP\\Views\\Clientes\\Index.cshtml",
+              "RelativeToolTip": "ACP\\Views\\Clientes\\Index.cshtml",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAqwFUAAABxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-07T18:38:35.863Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\ACP\\ACP\\Views\\Usuarios\\Index.cshtml",
+              "RelativeDocumentMoniker": "ACP\\Views\\Usuarios\\Index.cshtml",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\ACP\\ACP\\Views\\Usuarios\\Index.cshtml",
+              "RelativeToolTip": "ACP\\Views\\Usuarios\\Index.cshtml",
+              "ViewState": "AgIAABMAAAAAAAAAAAAmwCUAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-07T17:09:40.914Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "VehiculosController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\ACP\\ACP\\Controllers\\VehiculosController.cs",
+              "RelativeDocumentMoniker": "ACP\\Controllers\\VehiculosController.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\ACP\\ACP\\Controllers\\VehiculosController.cs",
+              "RelativeToolTip": "ACP\\Controllers\\VehiculosController.cs",
+              "ViewState": "AgIAAJ0AAAAAAAAAAAAgwKEAAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T17:06:28.97Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\ACP\\ACP\\Views\\Usuarios\\Edit.cshtml",
+              "RelativeDocumentMoniker": "ACP\\Views\\Usuarios\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\ACP\\ACP\\Views\\Usuarios\\Edit.cshtml",
+              "RelativeToolTip": "ACP\\Views\\Usuarios\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-07T17:02:58.968Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Email.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\ACP\\ACP\\Areas\\Identity\\Pages\\Account\\Manage\\Email.cshtml",
+              "RelativeDocumentMoniker": "ACP\\Areas\\Identity\\Pages\\Account\\Manage\\Email.cshtml",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\ACP\\ACP\\Areas\\Identity\\Pages\\Account\\Manage\\Email.cshtml",
+              "RelativeToolTip": "ACP\\Areas\\Identity\\Pages\\Account\\Manage\\Email.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAADwvwwAAABVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-07T16:24:31.981Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\ACP\\ACP\\Views\\Usuarios\\Details.cshtml",
+              "RelativeDocumentMoniker": "ACP\\Views\\Usuarios\\Details.cshtml",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\ACP\\ACP\\Views\\Usuarios\\Details.cshtml",
+              "RelativeToolTip": "ACP\\Views\\Usuarios\\Details.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACkAAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-07T19:03:25.332Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DetalleUsuarioViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\ACP\\ACP\\ViewModels\\DetalleUsuarioViewModel.cs",
+              "RelativeDocumentMoniker": "ACP\\ViewModels\\DetalleUsuarioViewModel.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\ACP\\ACP\\ViewModels\\DetalleUsuarioViewModel.cs",
+              "RelativeToolTip": "ACP\\ViewModels\\DetalleUsuarioViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T19:00:40.16Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IServicioCliente.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\ACP\\ACP\\Services\\Interfaces\\IServicioCliente.cs",
+              "RelativeDocumentMoniker": "ACP\\Services\\Interfaces\\IServicioCliente.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\ACP\\ACP\\Services\\Interfaces\\IServicioCliente.cs",
+              "RelativeToolTip": "ACP\\Services\\Interfaces\\IServicioCliente.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwsAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T18:37:47.88Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ServicioCliente.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\ACP\\ACP\\Services\\Implementations\\ServicioCliente.cs",
+              "RelativeDocumentMoniker": "ACP\\Services\\Implementations\\ServicioCliente.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\ACP\\ACP\\Services\\Implementations\\ServicioCliente.cs",
+              "RelativeToolTip": "ACP\\Services\\Implementations\\ServicioCliente.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEIAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T18:36:50.566Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ClientesController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\ACP\\ACP\\Controllers\\ClientesController.cs",
+              "RelativeDocumentMoniker": "ACP\\Controllers\\ClientesController.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\ACP\\ACP\\Controllers\\ClientesController.cs",
+              "RelativeToolTip": "ACP\\Controllers\\ClientesController.cs",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAQwIIAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T18:35:10.952Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\ACP\\ACP\\Views\\Vehiculos\\Index.cshtml",
+              "RelativeDocumentMoniker": "ACP\\Views\\Vehiculos\\Index.cshtml",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\ACP\\ACP\\Views\\Vehiculos\\Index.cshtml",
+              "RelativeToolTip": "ACP\\Views\\Vehiculos\\Index.cshtml",
+              "ViewState": "AgIAACcAAAAAAAAAAADwvz4AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-07T18:07:38.592Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UsuariosController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\ACP\\ACP\\Controllers\\UsuariosController.cs",
+              "RelativeDocumentMoniker": "ACP\\Controllers\\UsuariosController.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\ACP\\ACP\\Controllers\\UsuariosController.cs",
+              "RelativeToolTip": "ACP\\Controllers\\UsuariosController.cs",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAQwGcAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T16:55:20.601Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "RepositorioGenerico.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\ACP\\ACP\\Repositories\\Implementations\\RepositorioGenerico.cs",
+              "RelativeDocumentMoniker": "ACP\\Repositories\\Implementations\\RepositorioGenerico.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\ACP\\ACP\\Repositories\\Implementations\\RepositorioGenerico.cs",
+              "RelativeToolTip": "ACP\\Repositories\\Implementations\\RepositorioGenerico.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAIwFEAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T15:22:05.203Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

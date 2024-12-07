@@ -1,0 +1,151 @@
+﻿@model ACP.ViewModels.CrearVehiculoViewModel
+
+@{
+    // ViewData["Title"] = "Crear Vehículo";
+    Layout = "~/Views/Shared/_Layout.cshtml"; // Ajusta esto según el layout que estés utilizando
+}
+
+@* <h2>@ViewData["Title"]</h2> *@
+
+<h4 class="mb-4 h2">Nuevo Vehículo</h4>
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div class="form-floating mb-3">
+                <input asp-for="Placa" class="form-control" autocomplete="placa" aria-required="true" placeholder="Placa" />
+                <label asp-for="Placa" class="control-label">Placa</label>
+                <span asp-validation-for="Placa" class="text-danger"></span>
+            </div>
+            <div class="form-floating mb-3">
+                <select
+                    asp-for="Modelo"
+                    asp-items="Model.Modelos"
+                    optionLabel="-- selecciona --"
+                    class="form-select"
+                    autocomplete="modelo"
+                    aria-required="true"
+                    placeholder="Modelo">
+                </select>
+                <label asp-for="Modelo" class="control-label">Modelo</label>
+                <span asp-validation-for="Modelo" class="text-danger"></span>
+            </div>
+            <div class="form-floating mb-3">
+                <select 
+                    asp-for="FabricanteId"
+                    asp-items="Model.Fabricantes"
+                    id="fabricanteSelect"
+                    optionLabel="-- selecciona --"
+                    class="form-select" 
+                    autocomplete="fabricante" 
+                    aria-required="true" 
+                    placeholder="Fabricante">
+                </select>
+                <label asp-for="FabricanteId" class="control-label">Fabricante</label>
+                <span asp-validation-for="FabricanteId" class="text-danger"></span>
+            </div>
+            <div class="form-floating mb-3">
+                <select 
+                    disabled
+                    asp-for="ReferenciaId"
+                    id="referenciaSelect"
+                    class="form-select"
+                    autocomplete="referencia"
+                    aria-required="true">
+                </select>
+                <label asp-for="ReferenciaId" class="control-label">Referencia</label>
+                <span asp-validation-for="ReferenciaId" class="text-danger"></span>
+            </div>
+            <div class="form-floating mb-3">
+                <select 
+                    asp-for="ColorId"
+                    asp-items="Model.Colores"
+                    optionLabel="-- selecciona --"
+                    class="form-select"
+                    autocomplete="color"
+                    aria-required="true"
+                    placeholder="Color">
+                </select>
+                <label asp-for="ColorId" class="control-label">Color</label>
+                <span asp-validation-for="ColorId" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3">
+                <label for="clienteDocumento" class="control-label">Clientes</label>
+                <select id="clienteDocumento" name="ClientesSeleccionados" class="form-control" multiple="multiple"></select>
+            </div>
+            <div class="form-floating mb-3">
+                <button type="submit" class="btn btn-primary">Guardar</button>
+                <a class="btn btn-secondary" asp-action="Index">Cancelar</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+
+    <script>
+        $(document).ready(function () {
+
+            $("#clienteDocumento")
+                .select2({
+                    placeholder: "Buscar y seleccionar documentos",
+                    minimumInputLength: 2,
+                    ajax: {
+                        url: '@Url.Action("GetClientesDocumentos", "Clientes")',
+                        dataType: 'json',
+                        delay: 250,
+                        data: function (params) {
+                            return {
+                                term: params.term
+                            };
+                        },
+                        processResults: function (data) {
+                            return {
+                                results: $.map(data, function (documento) {
+                                    return {
+                                        id: documento,
+                                        text: documento
+                                    };
+                                })
+                            };
+                        },
+                        cache: true
+                    }
+                });
+
+                $('#fabricanteSelect').change(function() {
+                    var fabricanteId = $(this).val(); 
+                    var $referenciaSelect = $('#referenciaSelect'); 
+                    if (fabricanteId) { 
+                        $.ajax({ 
+                            url: '@Url.Action("GetReferenciasByFabricante", "Vehiculos")', 
+                            data: { 
+                                fabricanteId: fabricanteId 
+                            }, 
+                            success: function(data) { 
+                                $referenciaSelect.empty(); 
+                                $referenciaSelect.append('<option value="">-- selecciona --</option>'); 
+                                $.each(data, function(i, referencia) { 
+                                    $referenciaSelect
+                                    .append(
+                                        '<option value="' 
+                                        + referencia.id 
+                                        + '">' 
+                                        + referencia.nombre 
+                                        + '</option>'
+                                    ); 
+                                });
+                                $referenciaSelect.prop('disabled', false);
+                            } 
+                        }); 
+                    } else { 
+                        $('#referenciaSelect').empty(); 
+                        $referenciaSelect.prop('disabled', true);
+                    } 
+                });
+            });
+
+
+    </script>
+}
+

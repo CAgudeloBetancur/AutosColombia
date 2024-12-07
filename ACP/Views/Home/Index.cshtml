@@ -1,0 +1,71 @@
+﻿@model ACP.ViewModels.CrearVehiculoViewModel
+
+@{
+    ViewData["Title"] = "Inicio";
+    Layout = "~/Views/Shared/_Layout.cshtml"; // Ajusta esto según el layout que estés utilizando
+}
+
+<h2 class="mb-4 text-center">Buscar Vehículo</h2>
+
+<div class="row">
+    <form asp-action="Search" method="post" class="col-6 mx-auto mb-3">
+
+        <div class="form-group d-flex gap-2 align-items-center">
+            <label for="placa">Placa</label>
+            <input type="text" name="placa" class="form-control" value="@ViewBag.PlacaSugerida" />
+            <span asp-validation-for="Placa" class="text-danger"></span>
+            <button type="submit" class="btn btn-primary">Buscar</button>
+        </div>
+    </form>
+    <div class="clearfix"></div>
+    @if (ViewBag.VehiculoEncontrado != null)
+    {
+        var vehiculo = (ACP.Models.Vehiculo)ViewBag.VehiculoEncontrado;
+        <div class="col-6 mx-auto">
+            <h2>Detalle del Vehículo</h2>
+            <hr />
+            <div>
+                <dl class="row">
+                    <dt class="col-sm-2">Placa</dt>
+                    <dd class="col-sm-10">@vehiculo.Placa</dd>
+
+                    <dt class="col-sm-2">Modelo</dt>
+                    <dd class="col-sm-10">@vehiculo.Modelo</dd>
+
+                    <dt class="col-sm-2">Fabricante</dt>
+                    <dd class="col-sm-10">@vehiculo.Fabricante.Nombre</dd>
+
+                    <dt class="col-sm-2">Color</dt>
+                    <dd class="col-sm-10">@vehiculo.Color.Nombre</dd>
+
+                    <dt class="col-sm-2">Propietarios</dt>
+                    <dd class="col-sm-10">
+                        <ul>
+                            @foreach (var cliente in vehiculo.Clientes)
+                            {
+                                <li>@cliente.Nombre @cliente.Apellido</li>
+                            }
+                        </ul>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+
+    }
+    else if (ViewBag.PlacaSugerida != null)
+    {
+        <div class="col-6 mx-auto">
+            <h2>Vehículo No Encontrado</h2>
+            <p>No se encontró ningún vehículo con la placa <span class="fw-bold bg-warning fs-4">'@ViewBag.PlacaSugerida'.</span></p>
+            <p class="h3 mb-3">¿Quieres crear uno nuevo?</p>
+            <a asp-action="Create"
+               asp-controller="Vehiculos"
+               asp-route-placa="@ViewBag.PlacaSugerida"
+               class="btn btn-primary">
+                Crear Vehículo
+            </a>
+        </div>
+
+    }
+
+</div>
